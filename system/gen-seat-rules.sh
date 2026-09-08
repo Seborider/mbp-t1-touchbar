@@ -52,6 +52,7 @@ SUBSYSTEM=="drm", KERNEL=="card[0-9]*", SUBSYSTEMS=="usb", ATTRS{idVendor}=="05a
 # skipping the tagging keeps it away from both seat0 and the display manager.
 SUBSYSTEM=="input", ATTRS{name}=="Apple Inc. iBridge Touchpad", ENV{ID_SEAT}="seat-touchbar", GOTO="seat_end"
 SUBSYSTEM=="input", ATTRS{name}=="Apple Inc. Touch Bar Display Touchpad", ENV{ID_SEAT}="seat-touchbar", GOTO="seat_end"
+SUBSYSTEM=="input", ATTRS{name}=="Apple Inc. Apple T1 Controller Touchpad", ENV{ID_SEAT}="seat-touchbar", GOTO="seat_end"
 # --------------------------------------------------------------------------
 '''
 

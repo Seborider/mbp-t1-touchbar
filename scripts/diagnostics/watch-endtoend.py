@@ -20,7 +20,7 @@ def find(pred):
             return f'/dev/input/{e}', name
     return None, None
 
-dig_node, dig_name = find(lambda n: 'iBridge Touchpad' in n or ' Touch Bar' in n)
+dig_node, dig_name = find(lambda n: 'iBridge Touchpad' in n or ' Touch Bar' in n or 'T1 Controller Touchpad' in n)
 dfr_node, dfr_name = find(lambda n: n.startswith('Dynamic Function Row'))
 
 if not dig_node:
