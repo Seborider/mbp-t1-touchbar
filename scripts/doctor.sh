@@ -76,7 +76,7 @@ fi
 sec "input"
 FOUND=0
 for e in /sys/class/input/event*; do
-    case "$(cat "$e/device/name" 2>/dev/null)" in *iBridge*Touchpad*|*Touch\ Bar*)
+    case "$(cat "$e/device/name" 2>/dev/null)" in *iBridge*Touchpad*|*Touch\ Bar*|*T1\ Controller\ Touchpad*)
         FOUND=1
         P=$(cat "$e/device/properties")
         [ "$((0x$P & 2))" -ne 0 ] 2>/dev/null && ok "$(basename "$e") has INPUT_PROP_DIRECT" \

@@ -1,12 +1,13 @@
 --- a/src/main.rs
 +++ b/src/main.rs
-@@ -989,7 +989,8 @@
+@@ -989,7 +989,9 @@
              match event {
                  Event::Device(DeviceEvent::Added(evt)) => {
                      let dev = evt.device();
 -                    if dev.name().contains(" Touch Bar") {
 +                    if dev.name().contains(" Touch Bar")
-+                        || dev.name().contains("iBridge Touchpad") {
++                        || dev.name().contains("iBridge Touchpad")
++                        || dev.name().contains("T1 Controller Touchpad") {
                          digitizer = Some(dev);
                      }
                  }
